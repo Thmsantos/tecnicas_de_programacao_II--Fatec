@@ -230,12 +230,19 @@ for(let i = 0; i < turmasInterface.length; i++){
 //console.log("relação de alunos::")
 for(let i = 0; i < turmasInterface.length; i++){
     turmasInterface[i].obterRelacaoAlunos().forEach(aluno => {
+        //pegando media final de cada aluno
+        let mediaFinal = 0
+        for(let b = 0; b < aluno.notas.length; b++){
+            mediaFinal = mediaFinal + aluno.notas[b]
+        }
+
         console.log(
             turmasInterface[i].obterNome(), "\n",
             "nome: ", aluno.nome,"\n",
             "email: ", aluno.email, "\n",
             "RA: ", aluno.ra, "\n",
             "Notas: ", aluno.notas, "\n",
+            "Media Final: ", (mediaFinal/aluno.notas.length), "\n",
             "Curso: ", aluno.curso, "\n",
             "Semestre: ", aluno.semestre, "\n",
             "Status: ", aluno.status, "\n",
