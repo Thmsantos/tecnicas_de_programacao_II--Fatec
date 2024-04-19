@@ -1,0 +1,41 @@
+DESAFIO:
+
+Com base no projeto Decorator01 - Pizzaria. Desenvolva um outro projeto "Central de Alunos" no qual cada aluno deve selecionar um curso e serviços extras:
+
+Curso:
+<CURSO 1>
+<CURSO 2>
+<CURSO 3>
+
+Periodo:
+Manha
+Tarde
+Noite
+
+Adicionais:
+
+Serviços de Campus:
+
+Internet com os planos:
+2Gb - R$ 9,90
+5Gb - R$ 19,90
+10Gb - R$ 29,90
+
+Estacionamento:
+Bicicleta - R$ 30,00
+Moto - R$ 60,00
+Carro - R$ 120,00
+
+Aluguel de Armario:
+10 Litros - R$ 6,00
+20 Litros - R$ 10,00
+40 Litros - R$ 15,00
+
+Cursos Extras:
+Plataforma EAD 5 cursos - R$ 9,90
+Plataforma EAD 15 cursos - R$ 19,99
+Plataforma EAD ilimitado - R$ 24,90
+
+MOSTRAR:
+- Valor da Mensalidade Total
+- Descrição do curso
