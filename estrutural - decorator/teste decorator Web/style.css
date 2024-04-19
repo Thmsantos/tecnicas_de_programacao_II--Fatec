@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2 {
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+button {
+    margin-top: 20px;
+}
+
+#total-pedido {
+    font-weight: bold;
+    margin-top: 20px;
+}
