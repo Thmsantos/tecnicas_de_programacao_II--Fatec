@@ -1,45 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faculdade do Thiago</title>
     <link rel="stylesheet" href="./index.css">
 </head>
+
 <body>
-    <h1>Faculdade do Thiago</h1>
+    <div class="esquerda">
+        <h1>Faculdade do Thiago</h1>
 
-    <h1>Informações do seu curso</h1>
+        <h1>Informações do seu curso</h1>
 
-    <h2>Selecione seu curso:</h2>
+        <h2>Selecione seu curso:</h2>
 
-    <label>
-        <input type="radio" name="curso" value="Direito" data-curso="Direito"> Direito 
-    </label>
+        <label>
+            <input type="radio" name="curso" value="Direito" data-curso="Direito"> Direito
+        </label>
 
-    <label>
-        <input type="radio" name="curso" value="BioQuimica" data-curso="BioQuimica"> BioQuimica 
-    </label>
+        <label>
+            <input type="radio" name="curso" value="BioQuimica" data-curso="BioQuimica"> BioQuimica
+        </label>
 
-    <label>
-        <input type="radio" name="curso" value="Medicina" data-curso="Medicina"> Medicina 
-    </label>
+        <label>
+            <input type="radio" name="curso" value="Medicina" data-curso="Medicina"> Medicina
+        </label>
 
-    <h2>Selecione o período:</h2>
+        <h2>Selecione o período:</h2>
 
-    <label>
-        <input type="radio" name="periodo" value="Manha" data-periodo="Manha"> Manha
-    </label>
+        <label>
+            <input type="radio" name="periodo" value="Manha" data-periodo="Manha"> Manha
+        </label>
 
-    <label>
-        <input type="radio" name="periodo" value="Tarde" data-periodo="Tarde"> Tarde 
-    </label>
+        <label>
+            <input type="radio" name="periodo" value="Tarde" data-periodo="Tarde"> Tarde
+        </label>
 
-    <label>
-        <input type="radio" name="periodo" value="Noite" data-periodo="Noite"> Noite 
-    </label>
+        <label>
+            <input type="radio" name="periodo" value="Noite" data-periodo="Noite"> Noite
+        </label>
+
+        <h2>Serviço de Campus:</h2>
+
+        <label>
+            <input type="radio" name="internet" value="2Gb" data-internet="2Gb"> 2Gb - R$ 9.90
+        </label>
+
+        <label>
+            <input type="radio" name="internet" value="5Gb" data-internet="5Gb"> 5Gb - R$ 19.90
+        </label>
+
+        <label>
+            <input type="radio" name="internet" value="10Gb" data-internet="10Gb"> 10Gb - R$ 29.90
+        </label>
+
+        <h2>Estacionamento</h2>
+
+        <label>
+            <input type="radio" name="estacionamento" value="Bicicleta" data-estacionamento="Bicicleta"> Bicicleta
+        </label>
+
+        <label>
+            <input type="radio" name="estacionamento" value="Moto" data-estacionamento="Moto"> Moto
+        </label>
+
+        <label>
+            <input type="radio" name="estacionamento" value="Carro" data-estacionamento="Carro"> Carro
+        </label>
+
+        <h2>Armario</h2>
+
+        <label>
+            <input type="radio" name="armario" value="Dez_Litros" data-armario="Dez_Litros"> Dez_Litros
+        </label>
+
+        <label>
+            <input type="radio" name="armario" value="Vinte_Litros" data-armario="Vinte_Litros"> Vinte_Litros
+        </label>
+
+        <label>
+            <input type="radio" name="armario" value="Quarenta_Litros" data-armario="Quarenta_Litros"> Quarenta_Litros
+        </label>
+
+        <h2>
+            Cursos EAD extras:
+        </h2>
+
+        <label>
+            <input type="radio" name="EadCursos" value="EadCincoCursos" data-preco="9.90"> EadCincoCursos +R$9,90
+        </label>
+
+        <label>
+            <input type="radio" name="EadCursos" value="EadQuinzeCursos" data-preco="19.99"> EadQuinzeCursos +R$19,99
+        </label>
+
+        <label>
+            <input type="radio" name="EadCursos" value="EadIlimitado" data-preco="24.90"> EadIlimitado +R$24,90
+        </label>
+
+        <button onclick="juntarCaracteristicasCurso()">Juntar Caracteristicas</button>
+    </div>
 
 
-    //fazer o inputs dos adicionais
+
+    <div class="direita">
+
+        <h2>Total de custos:
+            <h2 id="custo_total"></h2>
+        </h2>
+
+        <h2>Descrição: 
+            <h4 id="descricao_curso"></h4>
+        </h2>
+
+    </div>
+
+    <script src="./index.js"></script>
 </body>
+
 </html>
