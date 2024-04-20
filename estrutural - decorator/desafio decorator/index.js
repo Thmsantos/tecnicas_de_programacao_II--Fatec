@@ -24,12 +24,11 @@ class Faculdade {
 class CursoPersonalizado extends Faculdade {
     constructor(curso, periodo, internet, estacionamento, armario) {
         super();
-        this.descricao = `\n
-                         Curso ${curso} 
-                         Periodo ${periodo} 
-                         Plano Internet ${internet} 
-                         tipo estacionamento ${estacionamento} 
-                         Plano Armario ${armario}`
+        this.descricao = `Curso: ${curso} 
+                         , Periodo: ${periodo} 
+                         , Plano Internet: ${internet} 
+                         , tipo estacionamento: ${estacionamento} 
+                         , Plano Armario: ${armario}`
         this.curso = curso;
         this.periodo = periodo;
         this.internet = internet;
@@ -135,13 +134,51 @@ class EadIlimitado extends Decorator {
     }
 }
 
-//uso 
-//curso, periodo, internet, estacionamento, armario
-let curso = new CursoPersonalizado("ADS", "Manhã", "5Gb", "Bicicleta", "Dez_Litros")
-console.log("Descrição:" + curso.getDescricao(), "\n", "Custo: R$: ", curso.custo())
+//uso web
+
+function juntarCaracteristicasCurso() {
+    let cursoEscolhido = document.querySelector('input[name="curso"]:checked')
+    let periodoEscolhido = document.querySelector('input[name="periodo"]:checked')
+    let internetEscolhida = document.querySelector('input[name="internet"]:checked')
+    let estacionamentoEscolhido = document.querySelector('input[name="estacionamento"]:checked')
+    let armarioEscolhido = document.querySelector('input[name="armario"]:checked')
+    let EadExtra = document.querySelector('input[name="EadCursos"]:checked')
+
+    let curso = new CursoPersonalizado(
+        cursoEscolhido.value, periodoEscolhido.value, internetEscolhida.value, estacionamentoEscolhido.value, armarioEscolhido.value
+    )
+
+    console.log("Descrição: ", curso.getDescricao())
+    console.log('Custo: ', curso.custo())
 
 
-//adicionando ead
+    if (EadExtra.value != null) {
 
-curso = new EadIlimitado(curso);
-console.log("Descrição:" + curso.getDescricao(), "\n", "Custo: R$: ", curso.custo())
+        if (EadExtra.value === "EadCincoCursos") {
+            console.log('\n', "EXTRA ADICIONADO")
+            curso = new EadCincoCursos(curso);
+            console.log("Descrição: ", curso.getDescricao())
+            console.log('Custo: ', curso.custo())
+
+        } else if (EadExtra.value === "EadQuinzeCursos") {
+            console.log('\n', 'EXTRA ADICIONADO')
+            curso = new EadQuinzeCursos(curso);
+            console.log("Descrição: ", curso.getDescricao())
+            console.log('Custo: ', curso.custo())
+
+        } else if (EadExtra.value === "EadIlimitado") {
+            console.log('\n', 'EXTRA ADICIONADO')
+            curso = new EadIlimitado(curso);
+            console.log("Descrição: ", curso.getDescricao())
+            console.log('Custo: ', curso.custo())
+
+        }
+    }
+
+    let tagCustoHtml = document.getElementById("custo_total");
+    let tagDescricaoHtml = document.getElementById("descricao_curso")
+
+    tagCustoHtml.textContent = curso.custo();
+    tagDescricaoHtml.textContent = curso.getDescricao();
+
+}
