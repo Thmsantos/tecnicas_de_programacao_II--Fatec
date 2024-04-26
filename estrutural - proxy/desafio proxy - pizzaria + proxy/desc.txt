@@ -1,0 +1,10 @@
+verificar se são nulos antes de chamar a função de montar pizza
+
+ATIVIDADE DO DIA:
+
+Com base no codigo da Pizzaria desenvolvido na aula passada.
+(Disponibilizado em ./Codigo Fonte). 
+Implemente o padrão Proxy onde mostre o pedido (descrição)
+após confirmar que o sabor, tamanho e borda foram selecionados.
+Caso contrario, não permita chamar a estrutura de demonstração
+e mostre "Concluir o pedido antes de finalizar".
